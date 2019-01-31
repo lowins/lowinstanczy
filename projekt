@@ -107,7 +107,7 @@ li a:hover {
 		<li><a href="contact.asp">Kontakt</a></li>
 		<li><a href="about.asp">O nas</a></li>
 	</ul>
-	<img id="gifek" src="anime.gif">
+	<img id="gifek" src="nazwapliku.gif">
 	</div>
 	<div id="TRESC"></div>
 	<div id="STOPKA">Stopka serwisu</div>
