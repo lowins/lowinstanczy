@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+ 
+</head>
+<body>
+<?php
+
+@$db=new mysqli('localhost','root','','TU_WSTAWIAMY_NAZWĘ_BAZY');
+
+
+// PONIŻSZY IF NIE JEST KONIECZNY
+if (mysqli_connect_errno())
+{echo "Wystąpił błąd. Połączenie nie zostało nawiązane";}
+else {echo "Połączeniu udane";}
+
+
+// $zapytanie2= "SELECT ID,imie, nazwisko, klasa, wiek FROM uczniowie;";
+$zapytanie2= "TU_WSTAW_ZAPYTANIE_SQL";
+
+$wysw = $db->query($zapytanie2);
+
+
+// metoda fetch_assoc zapisuje odpowiedź z bazy do tablicy
+while ($wiersz = $wysw->fetch_assoc()) 
+{
+	TU WSTAWIAMY KOD STRONY HTML Z UŻYCIEM PHP
+	NP. echo "<br /> <td>". $wiersz['NAZWA KOLUMNY TABELI Z BAZY']. "</td>"
+
+	}
+	
+$db->close();
+
+?>
+
+</body>
+</html>
