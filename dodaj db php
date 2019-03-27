@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+ 
+</head>
+<body>
+<?php
+
+
+// TU WSTAW NAZWY ZMIENNYCH Z FORMULARZA nazwane w name
+$imie=$_POST['NAZWA_NAME1'];
+$nazw=$_POST['NAZWA_NAME2'];
+$kl=$_POST['NAZWA_NAME3'];
+$wiek=$_POST['NAZWA_NAME4'];
+
+@$db=new mysqli('localhost','root','','TU_WPISZ_NAZWĘ_BAZY');
+
+// PONIŻSZY IF NIE JEST KONIECZNY
+if (mysqli_connect_errno())
+{echo "Wystąpił błąd. Połączenie nie zostało nawiązane";}
+else {echo "Połączeniu udane";}
+
+// $zapytanie= "insert into uczniowie (imie, nazwisko, klasa, wiek) values ('$imie', '$nazw', '$kl', '$wiek' )";
+
+$zapytanie= "TU_WPISZ_ZAPYTANIA_SQL";
+
+
+$wynik=$db->query($zapytanie);
+
+// PONIŻSZY IF NIE JEST KONIECZNY
+if (!$wynik) {echo 'Dane nie zostały zapisane';}
+else {echo 'Hurra!. Dane zapisane.';}
+
+$db->close();
+
+
+?>
+
+</body>
+</html>
