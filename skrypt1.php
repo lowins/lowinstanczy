@@ -1,10 +1,12 @@
 <html>
+
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
- 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
 </head>
+
 <body>
-<?php
+    <?php
 
 $imie=$_POST['imie'];
 $nazw=$_POST['nazwisko'];
@@ -28,11 +30,12 @@ $db->close();
 
 
 ?>
-<form action="index.html">
-	<input type="submit" value="powrót">
-</form>
-<form action="skrypt2.php">
-	<input type="submit" value="wyswietl">
-</form>
+    <form action="index.html">
+        <input type="submit" value="powrót">
+    </form>
+    <form action="skrypt2.php">
+        <input type="submit" value="wyswietl">
+    </form>
 </body>
+
 </html>
