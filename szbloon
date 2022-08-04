@@ -1,77 +1,80 @@
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859" />
 </head>
 <title>
     TEST
 </title>
 <style>
-html, body {
-    overflow:hidden;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+    html,
+    body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
 
-#all {  
-    margin-top: 50px;
-    margin-bottom: auto;
-    margin-right: auto;
-    margin-left: auto;
-    height:90%;
-    width: 90%;
-    text-align: left;
-}
+    #all {
+        margin-top: 50px;
+        margin-bottom: auto;
+        margin-right: auto;
+        margin-left: auto;
+        height: 90%;
+        width: 90%;
+        text-align: left;
+    }
 
-#NAGLOWEK { 
-    height: 15%;
-    background-color: #006600;
-}
+    #NAGLOWEK {
+        height: 15%;
+        background-color: #006600;
+    }
 
-#MENU { 
-    height: 80%;
-    width: 15%;
-    float: left;
-    overflow: hidden;
-    background-color:  #66FF66;
-}
+    #MENU {
+        height: 80%;
+        width: 15%;
+        float: left;
+        overflow: hidden;
+        background-color: #66FF66;
+    }
 
-#TRESC { 
-    height: 80%;
-    width: 70%;
-    float: left;
-    overflow: hidden;
-    background-color: #fff;
-}
+    #TRESC {
+        height: 80%;
+        width: 70%;
+        float: left;
+        overflow: hidden;
+        background-color: #fff;
+    }
 
-#lmenu { 
-    height: 80%;
-    width: 15%;
-    float: right;
-    overflow: hidden;
-    background-color: #aaa;
-}
+    #lmenu {
+        height: 80%;
+        width: 15%;
+        float: right;
+        overflow: hidden;
+        background-color: #aaa;
+    }
 
-#STOPKA { 
-    height: 5%;
-    clear: both;
-    width: 100%;
-    background-color: #006600;
-}
- 
-button{
-background-color:red;
-color: white;
-border: 1px solid blue;
-width:90%;
-}
+    #STOPKA {
+        height: 5%;
+        clear: both;
+        width: 100%;
+        background-color: #006600;
+    }
+
+    button {
+        background-color: red;
+        color: white;
+        border: 1px solid blue;
+        width: 90%;
+    }
 </style>
 </head>
-<body>
-<div id="all">
 
-    <div id="NAGLOWEK">
-<?php
+<body>
+    <div id="all">
+
+        <div id="NAGLOWEK">
+            <?php
         $data=date("s");
         if($data<30){
 $r = rand ( 1, 255 );
@@ -84,36 +87,36 @@ echo "<style> #NAGLOWEK {background-color:rgb(111,111,111);} </style>";
 }
  
 ?>
-</div>
-    <div id="MENU">
-    Menu nawigacyjne
-<?php
+        </div>
+        <div id="MENU">
+            Menu nawigacyjne
+            <?php
     $data=date("Y-m-d");
     $czas=date("H:i");
  
     echo "Data: $data Godzina: $czas";
 ?>
-<center>
-<button>ELO</button><br>
-<button>ELO</button><br>
-<button>ELO</button>
- 
-</div>
-<div id="TRESC"></div>
-<div id="lmenu">
-<form action="mstrona.php" method="post">
-    LISTA GOSCI:  <input type="text" name="imie" /><br />
-    <input type="submit" name="submit" value="Wyslij!" />
-</form>
-<?php
+            <center>
+                <button>ELO</button><br>
+                <button>ELO</button><br>
+                <button>ELO</button>
+
+        </div>
+        <div id="TRESC"></div>
+        <div id="lmenu">
+            <form action="mstrona.php" method="post">
+                LISTA GOSCI: <input type="text" name="imie" /><br />
+                <input type="submit" name="submit" value="Wyslij!" />
+            </form>
+            <?php
 $noweDane = $_POST['imie'];
 $fp = fopen("plik.txt", "w");
 fputs($fp, $noweDane);
 ?>
-</div>
-    <div id="STOPKA">Stopka serwisu</div>
-</div>
-<?php
+        </div>
+        <div id="STOPKA">Stopka serwisu</div>
+    </div>
+    <?php
 $elo = "";
 $r = rand ( 1, 255 );
 $g = rand ( 1, 255 );
