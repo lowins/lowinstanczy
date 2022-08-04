@@ -1,10 +1,12 @@
 <html>
+
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
- 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
 </head>
+
 <body>
-<?php
+    <?php
 
 
 // TU WSTAW NAZWY ZMIENNYCH Z FORMULARZA nazwane w name
@@ -37,4 +39,5 @@ $db->close();
 ?>
 
 </body>
+
 </html>
