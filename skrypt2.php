@@ -1,10 +1,12 @@
 <html>
+
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
- 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
 </head>
+
 <body>
-<?php
+    <?php
 
 @$db=new mysqli('localhost','root','','klasa4');
 
@@ -34,8 +36,9 @@ $db->close();
 
 
 ?>
-<form action="index.html">
-	<input type="submit" value="powrót">
-</form>
+    <form action="index.html">
+        <input type="submit" value="powrót">
+    </form>
 </body>
+
 </html>
